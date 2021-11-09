@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+        <!--uso html con thymeleaf con questo comando-->
+    <html lang="en" xmlns:th="http://www.thymeleaf.org"></html> 
+        <title>HelloSpringBoot</title>
+
+        <body>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>ISBN </th>
+                    <th>Auhtor</th>
+                </tr>
+                <!--automatizzo la scrittura della mia tabella sulla pag html-->
+                <tr th:each="book : ${books}">
+                    <td th:text="${book.getId()}">123</td> <!--sostituisce a 123 il lavore tra {} -->
+                    <td th:text="${book.title}">titolo1</td> <!--posso anche non mettere titol1, tanto viene sivrascritto-->
+                    <td th:text="${book.isbn}">isbn1</td><!-- .getIsbn è uguale-->
+                    <td th:text="${book.author.getName()}"> autore1</td>
+                </tr>
+            </table>
+         
+        </body>
+    </html>

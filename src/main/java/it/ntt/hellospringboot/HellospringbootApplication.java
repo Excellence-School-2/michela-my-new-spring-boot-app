@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class HellospringbootApplication {
 
-	//cartella bootstrap serve per popolare le tabelle
+	//cartella bootstrap serve yper popolare le tabelle
 	public static void main(String[] args) {
 		System.out.println("Ciao Mondo");
 		SpringApplication.run(HellospringbootApplication.class, args);

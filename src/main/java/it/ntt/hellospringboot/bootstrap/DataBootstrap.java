@@ -24,10 +24,18 @@ public class DataBootstrap implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-       Author michela = new Author("michela", "Minniti");
+       Author michela = new Author("Michela", "Minniti");
+       Author italo = new Author("Italo", "Calvino");
 
+    
        Book book1 = new Book("Le Gioie Mancate", "1326Afdnix");
        book1.setAuthor(michela);
+
+       Book book2 = new Book("palomar", "45gfdnix");
+       book2.setAuthor(italo);
+
+       Book book3 = new Book("Gli Amori difficili", "45gfdnix");
+       book3.setAuthor(italo);
 
        /*ora lo salvo nel db ma io ho le interfacce in repository --> sfrutto spring
        dichiaro sopra
@@ -40,7 +48,11 @@ public class DataBootstrap implements CommandLineRunner {
 
        //nb l'ordine è importante perchè Author è entità forte, deve esistere autore perchè esista un libro!!!
        authorRepository.save(michela);
+       authorRepository.save(italo);
        bookRepository.save(book1);
+       bookRepository.save(book2);
+       
+       bookRepository.save(book3);
 
     }
 }

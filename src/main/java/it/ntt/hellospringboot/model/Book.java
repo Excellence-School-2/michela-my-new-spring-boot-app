@@ -32,8 +32,16 @@ public class Book {
         this.isbn=isbn;
     }
 
+    public Long getId(){
+        return id;
+    }
 
-    public Author hetAuthor(){
+    public void setId(Long id){
+        this.id=id;
+    }
+
+
+    public Author getAuthor(){
         return this.author;
     }
     public void setAuthor(Author author){

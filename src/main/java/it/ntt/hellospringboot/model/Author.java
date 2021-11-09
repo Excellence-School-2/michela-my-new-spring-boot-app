@@ -34,9 +34,15 @@ public class Author {
          this.surname=surname;
      }
 
-     public Long getId(){
-         return id;
-     }
+
+     public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+    
 
      public Set<Book> getbookSet(){
          return this.bookSet;
@@ -60,9 +66,7 @@ public class Author {
         this.surname=surname;
     }
 
-    public void setId(Long id){
-        this.id = id;
-    }
+    
 
     public void setBookset(Set<Book> bookSet){
         this.bookSet=bookSet;

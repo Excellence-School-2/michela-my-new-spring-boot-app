@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Auhtor List</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Surname</th>
+        </tr>
+         <!--automatizzo la scrittura della mia tabella sulla pag html-->
+        <tr th:each="author : ${author_list}">
+            <td th:text="${author.id}">1</th>
+            <td  th:text="${author.name}">Mico</th>
+            <td  th:text="${author.surname}">Fungia</th>
+        </tr>
+    </table>
+</body>
+</html>

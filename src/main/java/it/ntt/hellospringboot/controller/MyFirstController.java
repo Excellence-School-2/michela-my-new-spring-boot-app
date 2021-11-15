@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class MyFirstController {
 
     //dico come richiedere alle richieste GET in /hello e risponde con del testo
-    @RequestMapping("/hello") //http://localhost:8080/hello
+    @RequestMapping("/hello" ) //http://localhost:8080/hello
     public String helloWorld(){
         return "Hello World! This is my Controller";
     }
